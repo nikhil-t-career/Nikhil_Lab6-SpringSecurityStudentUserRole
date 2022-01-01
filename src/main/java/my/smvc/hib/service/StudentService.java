@@ -2,16 +2,18 @@ package my.smvc.hib.service;
 
 import java.util.List;
 
-import my.smvc.hib.entity.Student;
+import org.springframework.transaction.annotation.Transactional;
+
+import my.smvc.hib.model.Student;
 
 public interface StudentService {
 
-	public List<Student> getStudents();
+	List<Student> getStudents();
 
-	public void saveStudent(Student theStudent);
+	void saveStudent(Student student);
 
-	public Student getStudent(int theId);
+	Student getStudent(long id);
 
-	public void deleteStudent(int theId);
+	void deleteStudent(long id);
 
 }
